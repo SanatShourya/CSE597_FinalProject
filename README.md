@@ -1,4 +1,4 @@
-## Link to the Paper Implemented
+## Paper Link 
 https://paperswithcode.com/paper/analyzing-generalization-of-vision-and
 
 ## Workflow without Images 
@@ -21,14 +21,10 @@ python vln/main.py --dataset touchdown_unseen --config configs/noimage.yaml --ex
 
 
 
-
-
-
-#
 ## Workflow with Images
 
 ### Panorama Preprocessing
-Unfortunately we are not allowed to share the panorama images or the ResNet features derived from them. You have to request to download the images here: https://sites.google.com/view/streetlearn/dataset  
+Not allowed to share the panorama images or the ResNet features derived from them. Request to download the images here: https://sites.google.com/view/streetlearn/dataset  
 Then change into the `panorama_preprocessing/last_layer` or `panorama_preprocessing/fourth_layer` folder and use the `extract_features.py` script. 
 
 ### Preparation
@@ -48,18 +44,4 @@ The `path_to_features_dir` should contain the `resnet_fourth_layer.pickle` and `
 ```
 python vln/main.py --dataset touchdown_seen --img_feat_dir 'path_to_features_dir' --config configs/4th-to-last.yaml --exp_name 4th-to-last
 ```
-
-IPYNB File
-=========
-
-The Jupyter Notebook I have used for running the code of the paper (Code for ACL 2022 paper: Schumann and Riezler, "Analyzing Generalization of Vision and Language Navigation to Unseen Outdoor Areas ") is displayed step by step. 
-The entire training results are portrayed in the output cells. 
-
-References
-=========
-
-Code based on https://github.com/VegB/VLN-Transformer  
-Touchdown splits based on: https://github.com/lil-lab/touchdown  
-map2seq splits based on: https://map2seq.schumann.pub  
-Panorama images can be downloaded here: https://sites.google.com/view/streetlearn/dataset
 
